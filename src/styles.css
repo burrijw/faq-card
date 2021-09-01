@@ -10,22 +10,32 @@
     }
 
     .question-wrapper {
-        @apply flex flex-row mb-2
+        @apply flex flex-row mb-2 
     }
 
     .question {
-        @apply font-bold flex-grow
+        @apply font-bold flex-grow transition duration-200 ease-linear cursor-pointer hover:text-soft-red
     }
 
     .toggle-wrapper {
-        @apply flex justify-center items-center flex-grow-0
+        @apply flex justify-center items-center flex-grow-0 -rotate-180 transition-transform duration-200 ease-linear
     }
 
     .answer-wrapper {
-        @apply grid grid-cols-12
+        @apply grid grid-cols-12 
     }
 
     .answer {
         @apply font-normal col-span-11 text-xs
     }
+
+    .animate-dropdown {
+        @apply rotate-180 transform transition-transform duration-200 ease-linear
+    }
+    
+    .animate-dropdown-rev {
+        @apply -rotate-180 transform transition-transform duration-200 ease-linear
+    }
+
+
 }
