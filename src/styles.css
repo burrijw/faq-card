@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .qa-section {
+        @apply pb-3 mb-3 border-b border-gray-300 text-thirteen
+        
+    }
+
+    .question-wrapper {
+        @apply flex flex-row mb-2
+    }
+
+    .question {
+        @apply font-bold flex-grow
+    }
+
+    .toggle-wrapper {
+        @apply flex justify-center items-center flex-grow-0
+    }
+
+    .answer-wrapper {
+        @apply grid grid-cols-12
+    }
+
+    .answer {
+        @apply font-normal col-span-11 text-xs
+    }
+}

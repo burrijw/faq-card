@@ -1,58 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <script src="./bundle.js" defer></script>
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
 
-    <title>Frontend Mentor | FAQ Accordion Card</title>
+<!-- todos -->
+<!-- 
+  
+- Add JS w/ event handlers for the dropdowns
+  - toggle 'hidden' class on each .answer
+- add desktop designs
+- fix the missing cube from the illustration -.- 
+- add styles for hover/focus states
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <!-- todo: Animate the cube on desktop, like it's floating a little bit -->
-  <body>
-    <div id="card">
-      <div id="img-container"></div>
-      <div id="content">
-        <h1>FAQ</h1>
-        <section>
-          <p class="question"></p>
-          <p class="answer"></p>
+-->
+
+
+
+<body>
+  <div
+       class="container bg-gradient-to-b from-purple-400 to-purple-600 h-screen flex flex-col justify-center items-center font-font">
+    <div id="card" class="rounded-3xl bg-gray-50 shadow-2xl relative w-80">
+      <div id=" img-container"
+           class="flex flex-col absolute -top-28 left-10 transform -translate-x-0.5">
+        <img src="./images/illustration-woman-online-mobile.svg" alt="">
+        <img src="./images/bg-pattern-mobile.svg" alt="" class="transform -translate-y-20">
+      </div>
+      <div id="content" class="mt-28 mx-6">
+
+        <h1 class="text-center mb-6 text-4xl font-bold">FAQ</h1>
+
+        <!-- Start QA section  -->
+        <section class="qa-section">
+          <!-- todo: event listener should go on the .question-wrapper so clicking anywhere opens it -->
+          <div class="question-wrapper">
+            <p class="question">How many team members can I invite?</p>
+            <div class="toggle-wrapper ">
+              <img class="w-3" src="./images/icon-arrow-down.svg" alt="">
+            </div>
+          </div>
+          <div class="answer-wrapper hidden">
+            <p class="answer">You can invite up to 2 additional
+              users on the Free plan. There is no limit on team members for the Premium
+              plan.</p>
+          </div>
         </section>
-        <p class="section-heading"></p>
+        <section class="qa-section">
+          <div class="question-wrapper">
+            <p class="question">What is the maximum file upload size?</p>
+            <div class="toggle-wrapper">
+              <img class="w-3" src="./images/icon-arrow-down.svg" alt="">
+            </div>
+          </div>
+          <div class="answer-wrapper hidden">
+            <p class="answer">No more than 2GB. All files in
+              your account must fit your allotted storage space.</p>
+          </div>
+        </section>
+
+        <section class="qa-section">
+          <div class="question-wrapper">
+            <p class="question">How do I reset my password? </p>
+            <div class="toggle-wrapper">
+              <img class="w-3" src="./images/icon-arrow-down.svg" alt="">
+            </div>
+          </div>
+          <div class="answer-wrapper hidden">
+            <p class="answer">Click “Forgot password” from the login page or “Change password” from
+              your profile page. A reset link will be emailed to you.
+            </p>
+          </div>
+        </section>
+
+        <section class="qa-section">
+          <div class="question-wrapper">
+            <p class="question">Can I cancel my subscription?
+            </p>
+            <div class="toggle-wrapper">
+              <img class="w-3" src="./images/icon-arrow-down.svg" alt="">
+            </div>
+          </div>
+          <div class="answer-wrapper hidden">
+            <p class="answer">Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </div>
+        </section>
+
+        <section class="qa-section border-none">
+          <div class="question-wrapper">
+            <p class="question">Do you provide additional support?
+            </p>
+            <div class="toggle-wrapper">
+              <img class="w-3" src="./images/icon-arrow-down.svg" alt="">
+            </div>
+          </div>
+          <div class="answer-wrapper">
+            <p class="answer">Chat and email support is available 24/7. Phone lines are open during
+              normal business hours.
+            </p>
+          </div>
+        </section>
+
       </div>
     </div>
-    div How many team members can I invite? You can invite up to 2 additional
-    users on the Free plan. There is no limit on team members for the Premium
-    plan. What is the maximum file upload size? No more than 2GB. All files in
-    your account must fit your allotted storage space. How do I reset my
-    password? Click “Forgot password” from the login page or “Change password”
-    from your profile page. A reset link will be emailed to you. Can I cancel my
-    subscription? Yes! Send us a message and we’ll process your request no
-    questions asked. Do you provide additional support? Chat and email support
-    is available 24/7. Phone lines are open during normal business hours.
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </body>
+  </div>
+  <div id="attribution" class="bg-gray-200 p-4">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
+    by <a href="#">Josh
+      Burri</a>.
+  </div>
+</body>
+
 </html>

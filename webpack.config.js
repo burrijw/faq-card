@@ -10,10 +10,16 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],
+  },
+  devServer: {
+    static: "dist",
+    watchFiles: {
+      paths: ["/src/**/*"],
+    },
   },
 };
 
